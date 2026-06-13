@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>에스제이글로벌 · 클린쿨타임</title>
+<meta name="description" content="에스제이글로벌은 일상의 작은 불편을 덜어주는 생활 편의 앱을 만듭니다. 첫 앱 클린쿨타임은 칫솔·수건·필터 등 교체주기를 기기 안에서만 관리하는 가정용 유틸리티 앱입니다." />
+<link rel="canonical" href="https://sjglobal.inclicks.kr/index.html" />
+<link rel="icon" href="https://sjglobal.inclicks.kr/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" href="https://sjglobal.inclicks.kr/icons/icon-192.png" />
+<link rel="apple-touch-icon" href="https://sjglobal.inclicks.kr/icons/icon-192.png" />
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f6f9" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14161b" />
+<meta property="og:title" content="에스제이글로벌 · 클린쿨타임" />
+<meta property="og:description" content="꼭 필요한 일을, 사용자 입장에서, 정직하게. 클린쿨타임은 이용자가 입력한 데이터를 기기 안에만 저장합니다." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://sjglobal.inclicks.kr/index.html" />
+<meta property="og:image" content="https://sjglobal.inclicks.kr/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<style>
+  :root{
+    --bg:#f4f6f9; --surface:#ffffff; --surface-2:#eef1f6;
+    --text:#1a1d22; --muted:#5b6573; --line:#e3e7ee;
+    --accent:#2557c4; --accent-tag:#1c4cb0; --btn-bg:#2557c4;
+    --accent-soft:#e8f0ff; --accent-2:#4a78da; --green:#2e9e6b;
+    --shadow:0 6px 22px rgba(20,30,60,.08); --shadow-sm:0 2px 8px rgba(20,30,60,.05);
+    --radius:16px; --radius-sm:10px; --maxw:760px; --headh:60px;
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14161b; --surface:#1c1f26; --surface-2:#232730;
+      --text:#e9edf2; --muted:#9aa3ad; --line:#2a2e36;
+      --accent:#7aa6ff; --accent-tag:#7aa6ff; --btn-bg:#3563c9;
+      --accent-soft:#1e2a44; --accent-2:#5b8def; --green:#52b788;
+      --shadow:0 6px 22px rgba(0,0,0,.35); --shadow-sm:0 2px 8px rgba(0,0,0,.3);
+      color-scheme:dark;
+    }
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html{scroll-behavior:smooth;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic","Segoe UI",Roboto,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.7;
+    -webkit-font-smoothing:antialiased; word-break:keep-all;
+  }
+  a{color:var(--accent);}
+  .wrap p a, .info-card a, footer .fmeta a, .disclosure a, .priv-summary a{
+    text-decoration:underline; text-underline-offset:2px;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px;}
+  [lang="en"]{font-style:normal;}
+
+  header.site{
+    position:sticky; top:0; z-index:10;
+    background:var(--surface);
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter:saturate(140%) blur(10px);
+    -webkit-backdrop-filter:saturate(140%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+    header.site{background:var(--surface);}
+  }
+  .navbar{display:flex; align-items:center; justify-content:space-between; gap:12px; height:var(--headh);}
+  .brand{display:flex; align-items:center; gap:10px; font-weight:700; font-size:17px; color:var(--text); text-decoration:none;}
+  .brand .dot{width:11px; height:11px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px var(--accent-soft);}
+  nav.anchors{display:flex; gap:4px; flex-wrap:wrap;}
+  nav.anchors a{
+    color:var(--muted); font-size:14px; font-weight:600; padding:7px 11px; border-radius:999px; text-decoration:none;
+  }
+  nav.anchors a:hover{color:var(--text); background:var(--surface-2);}
+  @media (max-width:520px){ .brand{font-size:16px;} nav.anchors a{padding:6px 9px; font-size:13px;} }
+
+  .hero{padding:54px 0 34px;}
+  .hero .eyebrow{color:var(--accent); font-weight:700; font-size:14px; letter-spacing:.02em; margin:0 0 12px;}
+  .hero h1{font-size:clamp(28px,6vw,40px); line-height:1.25; margin:0 0 16px; letter-spacing:-.01em;}
+  .hero p.lead{font-size:17px; color:var(--muted); margin:0 0 26px; max-width:60ch;}
+  .cta-row{display:flex; gap:12px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:15px;
+    padding:12px 20px; border-radius:12px; border:1px solid transparent; cursor:pointer; text-decoration:none;
+  }
+  .btn-primary{background:var(--btn-bg); color:#fff;}
+  .btn-primary:hover{filter:brightness(1.08);}
+  .btn-ghost{background:var(--surface); color:var(--text); border-color:var(--line); box-shadow:var(--shadow-sm);}
+  .btn-ghost:hover{background:var(--surface-2);}
+
+  section{padding:38px 0; scroll-margin-top:var(--headh);}
+  section + section{border-top:1px solid var(--line);}
+  .section-tag{display:inline-block; font-size:13px; font-weight:700; color:var(--accent-tag); background:var(--accent-soft); padding:4px 11px; border-radius:999px; margin-bottom:14px;}
+  h2{font-size:clamp(22px,5vw,28px); margin:0 0 10px; letter-spacing:-.01em;}
+  h3{font-size:18px; margin:26px 0 8px;}
+  h4{font-size:16px; margin:0 0 6px;}
+  p{margin:0 0 14px;}
+  .muted{color:var(--muted);}
+
+  .values{display:grid; gap:14px; margin-top:22px;}
+  @media (min-width:640px){ .values{grid-template-columns:repeat(3,1fr);} }
+  .value-card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow-sm);}
+  .value-card .num{display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:9px; background:var(--accent-soft); color:var(--accent-tag); font-weight:800; font-size:15px; margin-bottom:12px;}
+  .value-card h4{margin:0 0 6px; font-size:16px;}
+  .value-card p{font-size:14px; color:var(--muted); margin:0;}
+
+  .info-card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:6px 22px; box-shadow:var(--shadow-sm); margin-top:18px;}
+  .info-card dl{display:grid; grid-template-columns:auto 1fr; gap:0; margin:0;}
+  .info-card dt{font-weight:700; color:var(--muted); font-size:14px; padding:13px 16px 13px 0; border-bottom:1px solid var(--line); white-space:nowrap;}
+  .info-card dd{margin:0; font-size:14px; padding:13px 0; border-bottom:1px solid var(--line); word-break:break-word;}
+  .info-card dl > :nth-last-child(1), .info-card dl > :nth-last-child(2){border-bottom:none;}
+  @media (max-width:480px){
+    .info-card dl{grid-template-columns:1fr;}
+    .info-card dt{white-space:normal; padding-bottom:2px; border-bottom:none;}
+    .info-card dd{padding-top:0;}
+    .info-card dl > :nth-last-child(2){border-bottom:none;}
+  }
+
+  .app-hero{display:flex; align-items:flex-start; gap:16px; flex-wrap:wrap; margin-bottom:8px;}
+  .app-badge{flex-shrink:0; width:64px; height:64px; border-radius:18px; background:linear-gradient(135deg,var(--accent-2),var(--accent)); display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow);}
+  .app-badge svg{width:34px; height:34px;}
+  .callout{background:var(--accent-soft); border:1px solid var(--accent); border:1px solid color-mix(in srgb,var(--accent) 35%, transparent); border-radius:var(--radius); padding:18px 20px; margin:20px 0;}
+  .callout strong{color:var(--accent-tag);}
+  .callout p{margin:0 0 10px; font-size:15px;}
+  .callout p:last-child{margin:0;}
+  .callout .fine{font-size:13px; color:var(--muted);}
+
+  .features{display:grid; gap:12px; margin-top:20px;}
+  @media (min-width:640px){ .features{grid-template-columns:repeat(2,1fr);} }
+  .feature{display:flex; gap:13px; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-sm); padding:16px; box-shadow:var(--shadow-sm);}
+  .feature .ic{flex-shrink:0; width:38px; height:38px; border-radius:10px; background:var(--accent-soft); color:var(--accent); display:flex; align-items:center; justify-content:center; font-size:19px;}
+  .feature h4{margin:0 0 3px; font-size:15px;}
+  .feature p{margin:0; font-size:13.5px; color:var(--muted); line-height:1.55;}
+
+  .disclosure{font-size:13px; color:var(--muted); background:var(--surface-2); border-radius:var(--radius-sm); padding:13px 16px; margin-top:18px; border-left:3px solid var(--accent);}
+
+  .priv-summary{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow-sm); margin-top:18px;}
+  .priv-summary ul{margin:0; padding-left:20px;}
+  .priv-summary li{margin-bottom:9px; font-size:14.5px;}
+  .priv-summary li::marker{color:var(--green);}
+  .summary-note{font-size:13px; color:var(--muted); margin:14px 0 0; padding-top:12px; border-top:1px dashed var(--line);}
+  .link-row{margin-top:20px;}
+
+  footer.site{border-top:1px solid var(--line); background:var(--surface); margin-top:10px;}
+  footer.site .wrap{padding-top:30px; padding-bottom:36px;}
+  footer .fbrand{font-weight:700; font-size:16px; margin-bottom:6px;}
+  footer .fmeta{font-size:13.5px; color:var(--muted); margin:3px 0;}
+  footer .fmeta a{color:var(--muted);}
+  footer .copyright{margin-top:16px; font-size:12.5px; color:var(--muted);}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap navbar">
+    <a class="brand" href="#top" aria-label="에스제이글로벌 홈">
+      <span class="dot" aria-hidden="true"></span>
+      에스제이글로벌
+    </a>
+    <nav class="anchors" aria-label="페이지 내비게이션">
+      <a href="#top">소개</a>
+      <a href="#company">개발자 소개</a>
+      <a href="#app">클린쿨타임</a>
+      <a href="#privacy">개인정보</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-label="소개">
+    <div class="wrap">
+      <p class="eyebrow">에스제이글로벌</p>
+      <h1>일상의 작은 불편을<br />정직하게 덜어드립니다</h1>
+      <p class="lead">화려한 기능보다 “꼭 필요한 일을, 사용자 입장에서, 정직하게” 해내는 것을 더 중요하게 생각하는 생활 편의 앱 제작자입니다.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#app">클린쿨타임 알아보기</a>
+        <a class="btn btn-ghost" href="#company">개발자 소개</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="company">
+    <div class="wrap">
+      <span class="section-tag">개발자 소개</span>
+      <h2>에스제이글로벌</h2>
+      <p class="muted">에스제이글로벌은 일상의 작은 불편을 덜어주는 생활 편의 앱을 만드는 개인 개발자입니다. 우리는 화려한 기능보다 “꼭 필요한 일을, 사용자 입장에서, 정직하게” 해내는 것을 더 중요하게 생각합니다.</p>
+
+      <h3>우리가 추구하는 가치</h3>
+      <div class="values">
+        <div class="value-card">
+          <span class="num" aria-hidden="true">1</span>
+          <h4>사용자 데이터 존중</h4>
+          <p>꼭 필요한 정보만 다루고, 가능하면 사용자의 기기 안에만 머무르도록 설계합니다. 첫 앱 ‘클린쿨타임’은 이용자가 입력한 정보를 외부 서버에 저장하지 않고 오직 사용자 기기 안에만 보관합니다.</p>
+        </div>
+        <div class="value-card">
+          <span class="num" aria-hidden="true">2</span>
+          <h4>정직한 안내</h4>
+          <p>앱이 실제로 하는 일과 하지 않는 일을 부풀리거나 숨기지 않고 그대로 설명합니다. 수익 모델(예: 제휴 링크)이 있다면 명확히 고지합니다.</p>
+        </div>
+        <div class="value-card">
+          <span class="num" aria-hidden="true">3</span>
+          <h4>부담 없는 사용</h4>
+          <p>회원가입 없이 무료로 쓸 수 있는 가벼운 도구를 지향합니다.</p>
+        </div>
+      </div>
+
+      <h3>개발자 정보</h3>
+      <div class="info-card">
+        <dl>
+          <dt>개발자</dt><dd>에스제이글로벌</dd>
+          <dt>운영자</dt><dd>송승재 (개인 개발자)</dd>
+          <dt>문의 이메일</dt><dd><a href="mailto:ksongsj@gmail.com">ksongsj@gmail.com</a></dd>
+          <dt>홈페이지</dt><dd><a href="https://sjglobal.inclicks.kr">sjglobal.inclicks.kr</a></dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="app">
+    <div class="wrap">
+      <span class="section-tag">우리의 첫 앱</span>
+      <div class="app-hero">
+        <div class="app-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <div>
+          <h2 style="margin-bottom:4px;">클린쿨타임</h2>
+          <p class="muted" style="margin:0;"><span lang="en">Clean Cooltime</span> · 가족용 교체주기 알리미</p>
+        </div>
+      </div>
+
+      <p class="muted">“또 갈아야 하는 걸 깜빡했네”라는 일상의 작은 후회를 줄여주는 가정용 유틸리티 앱입니다. 칫솔, 수건, 정수기 필터처럼 일정한 ‘교체 주기’가 있는 생활용품은 막상 때가 되면 기억하기 어렵습니다. 클린쿨타임은 이런 물건들을 한 번 등록해 두면, 교체 시기가 다가올 때 기기 알림(로컬 알림)으로 미리 알려줍니다.</p>
+
+      <div class="callout">
+        <p><strong>가장 큰 신뢰 포인트. 이용자가 입력한 정보는 기기를 떠나지 않습니다.</strong> 가족 별칭, 항목명, 카테고리, 교체 주기, 마지막 교체일, 교체 이력, 가격(선택), 여분 재고 등 입력한 모든 정보는 오직 사용자 기기 내부의 로컬 저장소(IndexedDB)에만 저장됩니다. 이용자 데이터를 저장·수집하는 자체 서버가 없고, 회원가입·로그인도 없으며, 개발자나 제3자에게 전송·수집되는 입력 정보가 없습니다. 현재 분석 도구·추적·광고 SDK를 사용하지 않습니다.</p>
+        <p class="fine">참고: 앱에 쓰이는 글꼴과 라이브러리는 모두 앱 안에 포함(번들)되어 있어, 앱이 자동으로 외부 서버나 CDN에 접속하지 않습니다. 외부 통신은 이용자가 ‘장보기’에서 쿠팡 링크를 직접 누를 때에만 일어납니다.</p>
+      </div>
+
+      <p class="muted">데이터는 사용자가 직접 관리할 수 있습니다. 백업(JSON 내보내기)과 복원이 가능하고, 앱 내 ‘전체 초기화’로 모든 데이터를 한 번에 지울 수 있으며, 앱을 삭제하면 기기 내 데이터도 모두 사라집니다. 클린쿨타임은 무료이며 인앱결제가 없고, 특별히 아동을 대상으로 하지 않는 일반 가정용 앱입니다.</p>
+
+      <h3>주요 기능</h3>
+      <div class="features">
+        <div class="feature"><span class="ic" aria-hidden="true">🔁</span><div><h4>교체 주기 관리</h4><p>칫솔·수건·정수기 필터 등 생활용품의 교체 주기와 마지막 교체일을 등록해 관리합니다.</p></div></div>
+        <div class="feature"><span class="ic" aria-hidden="true">🔔</span><div><h4>교체일 알림</h4><p>교체 시기가 다가오면 기기 알림(로컬 알림)으로 미리 안내합니다. (알림 권한 사용)</p></div></div>
+        <div class="feature"><span class="ic" aria-hidden="true">👪</span><div><h4>가족별 관리</h4><p>가족 구성원 별칭(닉네임)을 만들어 구성원별로 항목을 나눠 관리합니다.</p></div></div>
+        <div class="feature"><span class="ic" aria-hidden="true">🛒</span><div><h4>장보기 + 쿠팡 링크</h4><p>교체가 필요한 품목의 쿠팡 구매 링크 제공(쿠팡 파트너스 제휴, 사용자가 직접 눌러 이동).</p></div></div>
+        <div class="feature"><span class="ic" aria-hidden="true">🧾</span><div><h4>교체 이력·가격·재고</h4><p>교체 이력, 가격(선택 입력), 여분 재고 수량을 함께 기록합니다.</p></div></div>
+        <div class="feature"><span class="ic" aria-hidden="true">📱</span><div><h4>기기 내 저장</h4><p>이용자 데이터는 자체 서버 없이 오직 사용자 기기(IndexedDB)에만 저장. 회원가입·추적 없음.</p></div></div>
+        <div class="feature"><span class="ic" aria-hidden="true">💾</span><div><h4>백업과 복원</h4><p>JSON 파일로 데이터를 직접 내보내고 복원할 수 있습니다.</p></div></div>
+        <div class="feature"><span class="ic" aria-hidden="true">🗑️</span><div><h4>전체 초기화</h4><p>앱 내에서 모든 데이터를 한 번에 삭제할 수 있습니다.</p></div></div>
+      </div>
+
+      <div class="disclosure">
+        <strong>제휴 고지.</strong> 장보기 화면의 쿠팡 구매 링크는 쿠팡 파트너스 활동의 일환으로, 이를 통해 일정액의 수수료를 제공받을 수 있습니다. 링크는 사용자가 직접 눌렀을 때만 작동하며, 누르면 쿠팡으로 이동합니다. 이때 제휴 추적을 위한 정보가 링크에 포함될 수 있고, 일반 웹 접속과 동일하게 접속 정보(IP 등)가 쿠팡에 전달될 수 있습니다. 앱이 이용자의 개인정보를 쿠팡 측에 능동적으로 전송하지는 않으며, 이동 후 쿠팡 사이트의 개인정보 처리는 쿠팡의 정책을 따릅니다.
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <span class="section-tag">개인정보처리방침</span>
+      <h2>개인정보처리방침 요약</h2>
+      <p class="muted">시행일·최종 수정일: 2026년 6월 12일. 핵심만 먼저 요약합니다. 전체 조항은 별도 페이지에서 확인하실 수 있습니다.</p>
+      <div class="priv-summary">
+        <ul>
+          <li>이용자가 입력한 정보는 <strong>오직 이용자 기기 안의 로컬 저장소(IndexedDB)에만</strong> 저장되며, 외부 서버로 전송·수집하지 않습니다.</li>
+          <li><strong>회원가입·로그인이 없고</strong>, 개발자(에스제이글로벌)나 제3자에게 전달되는 입력 정보가 없습니다.</li>
+          <li><span lang="en">Google Analytics</span> 등 분석 도구, 광고 식별자·광고 SDK·추적 기능을 <strong>사용하지 않습니다.</strong></li>
+          <li>알림은 모두 기기 안에서 로컬로 예약·발송되며 서버 푸시를 쓰지 않습니다. 글꼴·라이브러리가 앱에 모두 포함되어 있어 앱이 자동으로 외부 서버에 접속하지 않으며, 외부 통신은 이용자가 ‘장보기’의 쿠팡 링크를 직접 누를 때에만 일어납니다.</li>
+          <li>‘장보기’의 쿠팡 링크는 사용자가 직접 누를 때 쿠팡으로 이동하는 제휴 추적 링크이며(쿠팡 파트너스 제휴), 앱이 개인정보를 쿠팡에 능동적으로 전송하지 않습니다.</li>
+          <li>‘전체 초기화’ 또는 앱 삭제로 데이터를 영구 삭제할 수 있고, JSON으로 백업·복원할 수 있습니다.</li>
+          <li>특정 연령층, 특히 아동을 대상으로 하지 않는 일반 가정용 앱입니다.</li>
+        </ul>
+        <p class="summary-note">※ 본 요약은 안내용이며, 효력은 개인정보처리방침 <strong>전문</strong>이 우선합니다. Google Play에 등록된 처리방침 URL은 전문 페이지(<span lang="en">https://sjglobal.inclicks.kr/privacy.html</span>)입니다.</p>
+      </div>
+      <div class="link-row">
+        <a class="btn btn-primary" href="https://sjglobal.inclicks.kr/privacy.html">개인정보처리방침 전문 보기</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fbrand">에스제이글로벌</div>
+    <p class="fmeta">일상의 작은 불편을 덜어주는 생활 편의 앱</p>
+    <p class="fmeta">문의: <a href="mailto:ksongsj@gmail.com">ksongsj@gmail.com</a></p>
+    <p class="fmeta">홈페이지: <a href="https://sjglobal.inclicks.kr">https://sjglobal.inclicks.kr</a></p>
+    <p class="fmeta"><a href="https://sjglobal.inclicks.kr/privacy.html">개인정보처리방침</a></p>
+    <p class="copyright"><span lang="en">© 2026 SJGLOBAL.</span> 에스제이글로벌. <span lang="en">All rights reserved.</span></p>
+  </div>
+</footer>
+
+</body>
+</html>
