@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sjglobal.inclicks.kr/sitemap.xml
+Sitemap: https://cleancooltime.inclicks.kr/sitemap.xml
